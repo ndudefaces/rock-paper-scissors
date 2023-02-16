@@ -32,11 +32,11 @@
     }
     
     const computerSelection = getComputerChoice();
+    let playerScore = 0;
+    let computerScore = 0;
+    let gameWinner = '';
     
     function game(){
-        let playerScore = 0;
-        let computerScore = 0;
-        let gameWinner = '';
         for(let i=0; i < 5; i++) {
             let playerSelection = prompt("Start the game by choosing rock, paper, or scissors.").toLowerCase();
             let roundResult = playRound (playerSelection, getComputerChoice());
@@ -45,6 +45,13 @@
             } else if (roundResult === "computerWinRound") {
                 computerScore++;
             }
+        }
+        if (playerScore > computerScore) {
+            gameWinner = alert('Nicely done, you\'ve won!');
+        } else if (computerScore > playerScore) {
+            gameWinner = alert('You been defeated!');
+        } else {
+            gameWinner = alert('It\'s a draw!');
         }
     }
     console.log (game());
