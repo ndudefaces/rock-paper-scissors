@@ -14,19 +14,19 @@
         }
         function playRound (playerSelection, computerSelection) {
             if (playerSelection === computerSelection) {
-            alert (`It\'s a tie! You both picked ${playerSelection}.`);
+            console.log(`It\'s a tie! You both picked ${playerSelection}.`);
             return "drawRound";
         } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-            alert (`You win! ${playerSelection} beats ${computerSelection}.`);
+            console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
             return "playerWinRound";
         } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-            alert (`You win! ${playerSelection} beats ${computerSelection}.`);
+            console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
             return "playerWinRound";
         } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-            alert (`You win! ${playerSelection} beats ${computerSelection}.`);
+            console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
             return "playerWinRound";
         } else {
-            alert (`You lose! ${computerSelection} beats ${playerSelection}.`);
+            console.log(`You lose! ${computerSelection} beats ${playerSelection}.`);
             return "computerWinRound";
         }
     }
@@ -47,11 +47,11 @@
             }
         }
         if (playerScore > computerScore) {
-            gameWinner = alert('Nicely done, you\'ve won!');
+            gameWinner = console.log('Nicely done, you\'ve won!');
         } else if (computerScore > playerScore) {
-            gameWinner = alert('You been defeated!');
+            gameWinner = console.log('You been defeated!');
         } else {
-            gameWinner = alert('It\'s a draw!');
+            gameWinner = console.log('It\'s a draw!');
         }
     }
     console.log (game());

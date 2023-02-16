@@ -1,1 +1,5 @@
-# rock-paper-scissors
+This is my rock, paper, scissors game. This was pretty difficult for me, and I found myself having to look up what I felt were the most basic things (randomization, for loops, etc.). I think I have a decent understanding as to how it all comes together, and planning out/pseudocoding the functions really helped. The functions and if/else if portions were fairly simple, but I think understanding function scope and formatting was what really tripped me up. 
+
+Honestly the game itself wasn't the difficult part, it was the game function and scorekeeping with the for loop that got to me. I had to look up a lot to see what exactly was going wrong, and I felt like I was sometimes overthinking what or what not to include in the loop. 
+
+Actually, now that I look at all the small parts I put together, it makes sense to me looking back at it with a macro lens. Neat!
