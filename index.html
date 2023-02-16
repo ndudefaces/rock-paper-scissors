@@ -13,8 +13,8 @@
             return pick [Math.floor(Math.random() * pick.length)];
         }
         function playRound (playerSelection, computerSelection) {
-            if (playerSelection == computerSelection) {
-                return ; drawRound;
+            if (playerSelection === computerSelection) {
+            return drawRound;
         } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
             return playerWinRound;
         } else if (playerSelection === 'paper' && computerSelection === 'rock') {
@@ -25,7 +25,10 @@
             return computerWinRound;
         }
     }
-
+    
+    let playerScore = 0;
+    let computerScore = 0;
+    let draw = 0;
     const playerSelection = prompt("Start the game by choosing rock, paper, or scissors.").toLowerCase();
     const computerSelection = getComputerChoice();
     const drawRound = `It\'s a tie! You both picked ${playerSelection}.`;
