@@ -8,10 +8,18 @@
 </head>
 <body>
     <h3>Let's play a game...</h3>
-    <button class = 'rock'>Rock</button>
-    <button class = 'paper'>Paper</button>
-    <button class = 'scissors'>Scissors</button>
+    <div class="container">Choose your weapon
+        <button class="rock">Rock</button>
+        <button class="paper">Paper</button>
+        <button class="scissors">Scissors</button>
+    </div>
+    <div class="outcome"></div>
     <script>
+        const rockButton = document.querySelector('.rock');
+        const paperButton = document.querySelector('.paper');
+        const scissorsButton = document.querySelector('.scissors');
+        const outcomeDiv = document.querySelector('.outcome');
+
         function getComputerChoice () {
         const pick = ['rock', 'paper', 'scissors'];
             return pick [Math.floor(Math.random() * pick.length)];
@@ -34,13 +42,18 @@
             return "computerWinRound";
         }
     }
+
+    rockButton.addEventListener('click', () => {
+            const computerSelection = getComputerChoice();
+            const playerSelection = 'rock';
+            playRound(playerSelection, computerSelection);
+        })
     
-    const computerSelection = getComputerChoice();
     let playerScore = 0;
     let computerScore = 0;
     let gameWinner = '';
     
-    function game(){
+/*     function game(){
         for(let i=0; i < 5; i++) {
             let playerSelection = prompt("Start the game by choosing rock, paper, or scissors.").toLowerCase();
             let roundResult = playRound (playerSelection, getComputerChoice());
@@ -57,8 +70,8 @@
         } else {
             gameWinner = console.log('It\'s a draw!');
         }
-    }
-    console.log (game());
+    } */
+    console.log (playRound());
     </script>
 </body>
 </html>
