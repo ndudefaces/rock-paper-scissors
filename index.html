@@ -9,8 +9,8 @@
 <body>
     <h3>Let's play a game...</h3>
     <div class="running-score">
-        <span class="player-score">Player Score: </span>
-        <span class="computer-score">Computer Score: </span>
+        <span class="player-score"></span>
+        <span class="computer-score"></span>
     </div>
     <div class="container">Choose your weapon: 
         <button class="rock">Rock</button>
@@ -60,8 +60,8 @@
     }
 
     const updateScores = (playerScore, computerScore) => {
-        playerScoreSpan.innerText = `${playerScore}`;
-        computerScoreSpan.innerText = `${computerScore}`;
+        playerScoreSpan.innerText = `Player Score: ${playerScore}`;
+        computerScoreSpan.innerText = `Computer Score: ${computerScore}`;
     }
 
     rockButton.addEventListener('click', () => {
@@ -101,25 +101,6 @@
             outcomeDiv.appendChild(h4);
         }
     }
-/*     function game(){
-        for(let i=0; i < 5; i++) {
-            let playerSelection = prompt("Start the game by choosing rock, paper, or scissors.").toLowerCase();
-            let roundResult = playRound (playerSelection, getComputerChoice());
-            if (roundResult === "playerWinRound") {
-                playerScore++;
-            } else if (roundResult === "computerWinRound") {
-                computerScore++;
-            }
-        }
-        if (playerScore > computerScore) {
-            gameWinner = console.log('Nicely done, you\'ve won!');
-        } else if (computerScore > playerScore) {
-            gameWinner = console.log('You\'ve been defeated!');
-        } else {
-            gameWinner = console.log('It\'s a draw!');
-        }
-    } */
-    //console.log (playRound());
     </script>
 </body>
 </html>
