@@ -8,7 +8,11 @@
 </head>
 <body>
     <h3>Let's play a game...</h3>
-    <div class="container">Choose your weapon
+    <div class="running-score">
+        <span class="player-score">Player Score: </span>
+        <span class="computer-score">Computer Score: </span>
+    </div>
+    <div class="container">Choose your weapon: 
         <button class="rock">Rock</button>
         <button class="paper">Paper</button>
         <button class="scissors">Scissors</button>
@@ -19,6 +23,8 @@
         const paperButton = document.querySelector('.paper');
         const scissorsButton = document.querySelector('.scissors');
         const outcomeDiv = document.querySelector('.outcome');
+        const playerScoreSpan = document.querySelector('.player-score');
+        const computerScoreSpan = document.querySelector('.computer-score');
         let playerScore = 0;
         let computerScore = 0;
 
@@ -53,10 +59,16 @@
         }
     }
 
+    const updateScores = (playerScore, computerScore) => {
+        playerScoreSpan.innerText = `${playerScore}`;
+        computerScoreSpan.innerText = `${computerScore}`;
+    }
+
     rockButton.addEventListener('click', () => {
             const computerSelection = getComputerChoice();
             const playerSelection = 'rock';
             playRound(playerSelection, computerSelection);
+            updateScores(playerScore, computerScore);
             checkForWinner(playerScore, computerScore);
         })
 
@@ -64,6 +76,7 @@
             const computerSelection = getComputerChoice();
             const playerSelection = 'paper';
             playRound(playerSelection, computerSelection);
+            updateScores(playerScore, computerScore);
             checkForWinner(playerScore, computerScore);
         })
 
@@ -71,6 +84,7 @@
             const computerSelection = getComputerChoice();
             const playerSelection = 'scissors';
             playRound(playerSelection, computerSelection);
+            updateScores(playerScore, computerScore);
             checkForWinner(playerScore, computerScore);
         })
 
